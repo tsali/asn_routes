@@ -5,7 +5,7 @@
 ######################
 
 This is a simple script that will search various databses for advertised routes from an ASN you specify.
-Currently I have configured it to query RADB, APNIC and RIPE
+Currently I have configured it to query RADB, ARIN, APNIC, AFRINIC, LACNIC and RIPE.
 
 To install
 1. Log into the bash capable server you're installing it in

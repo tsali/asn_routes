@@ -10,18 +10,33 @@ echo "This is a simple tool to list advertised routes for any ASN"
 echo ""
 read -p "Enter the ASN: " line
 echo ""
-echo "Advertised routes for AS"$line"" per RADB.NET
+echo "Advertised routes for AS"$line" per RADB.NET"
 whois -h whois.radb.net -- '-i origin AS'"$line"'' | grep "/" | awk '{print$2}' | egrep ^[1-9]
+echo ""
+read -p "Press any key to continue to ARIN.NET.."
+echo ""
+echo "Advertised routes for AS"$line" per ARIN.NET"
+whois -h whois.arin.net -- '-i origin AS'"$line"'' | grep "/" | awk '{print$2}' | egrep ^[1-9]
 echo ""
 read -p "Press any key to continue to APNIC.NET.."
 echo ""
-echo "Advertised routes for AS"$line"" per APNIC.NET
+echo "Advertised routes for AS"$line" per APNIC.NET"
 whois -h whois.apnic.net -- '-i origin AS'"$line"'' | grep "/" | awk '{print$2}' | egrep ^[1-9]
 echo ""
 read -p "Press any key to continue to RIPE.NET.."
 echo ""
-echo "Advertised routes for AS"$line"" per RIPE.NET
+echo "Advertised routes for AS"$line" per RIPE.NET"
 whois -h whois.ripe.net -- '-i origin AS'"$line"'' | grep "/" | awk '{print$2}' | egrep ^[1-9]
+echo ""
+read -p "Press any key to continue to LACNIC.NET"
+echo ""
+echo "Advertised routes for AS"$line" per LACNIC.NET"
+whois -h whois.lacnic.net -- '-i origin AS'"$line"'' | grep "/" | awk '{print$2}' | egrep ^[1-9]
+echo ""
+read -p "Press any key to continue to AFRINIC.NET"
+echo ""
+echo "Advertised routes for AS"$line" per AFRINIC.NET"
+whois -h whois.afrinic.net -- '-i origin AS'"$line"'' | grep "/" | awk '{print$2}' | egrep ^[1-9]
 echo ""
 read -p "Press any key to exit.."
 echo ""
