@@ -1,0 +1,27 @@
+#!/bin/bash
+###############################
+# Written by James Washington #
+#       github.com/tsali      #
+#          2018/06/19         #
+###############################
+
+echo ""
+echo "This is a simple tool to list advertised routes for any ASN"
+echo ""
+read -p "Enter the ASN: " line
+echo ""
+echo "Advertised routes for AS"$line"" per RADB.NET
+whois -h whois.radb.net -- '-i origin AS'"$line"'' | grep "/" | awk '{print$2}' | egrep ^[1-9]
+echo ""
+read -p "Press any key to continue to APNIC.NET.."
+echo ""
+echo "Advertised routes for AS"$line"" per APNIC.NET
+whois -h whois.apnic.net -- '-i origin AS'"$line"'' | grep "/" | awk '{print$2}' | egrep ^[1-9]
+echo ""
+read -p "Press any key to continue to RIPE.NET.."
+echo ""
+echo "Advertised routes for AS"$line"" per RIPE.NET
+whois -h whois.ripe.net -- '-i origin AS'"$line"'' | grep "/" | awk '{print$2}' | egrep ^[1-9]
+echo ""
+read -p "Press any key to exit.."
+echo ""
