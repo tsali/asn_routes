@@ -1,5 +1,5 @@
 ######################
-#### # James Washington
+#### # JW
 #### # Network Engineer II
 #### # 2018/06/19
 ######################
@@ -19,3 +19,6 @@ For the copy/paste inclined:
 ```
 git clone https://github.com/tsali/asn_routes.git && cd asn_routes && chmod +x asn
 ```
+
+TODO: (June 2024)
+  1. Update script to allow you to type the ASN inline with the command and if it's blank, to then ask for the ASN.
