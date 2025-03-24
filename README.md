@@ -1,8 +1,5 @@
-######################
-#### # JW
-#### # Network Engineer II
-#### # 2018/06/19
-######################
+Tsali
+Date: 2018/06/19
 
 This is a simple script that will search various databses for advertised routes from an ASN you specify.
 Currently I have configured it to query RADB, ARIN, APNIC, AFRINIC, LACNIC and RIPE.
@@ -20,5 +17,5 @@ For the copy/paste inclined:
 git clone https://github.com/tsali/asn_routes.git && cd asn_routes && chmod +x asn
 ```
 
-TODO: (June 2024)
+TODO: (No ETA)
   1. Update script to allow you to type the ASN inline with the command and if it's blank, to then ask for the ASN.
